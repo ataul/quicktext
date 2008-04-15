@@ -62,6 +62,7 @@ Language.snippets = [
 	{ input : 'rs', output: 'resources/sitefiles/$0'},
 	{ input : 'rc', output: 'resources/css/$0'},
 	{ input : 'rj', output: 'resources/js/$0'},
+	{ input : 'rimg', output: 'resources/images/$0'},
 	{ input : 'n', output : '$num = mysql_num_rows(\$result);\n' },
 	{ input : 'num', output : '$num = \$result->numRows();' },
 	{ input : 'res', output : '$=mysql_result($result,$i,\'\');\n' },	

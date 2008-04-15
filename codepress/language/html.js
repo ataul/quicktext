@@ -30,6 +30,7 @@ Language.snippets = [
 	{ input : 'rs', output: 'resources/sitefiles/$0'},
 	{ input : 'rc', output: 'resources/css/$0'},
 	{ input : 'rj', output: 'resources/js/$0'},
+	{ input : 'rimg', output: 'resources/images/$0'},
 	{ input : 'html', output : '<html>\n\t$0\n</html>' },
 	{ input : 'head', output : '<head>\n\t<meta http-equiv="content-type" content="text/html; charset=utf-8" />\n\t<title>$0</title>\n\t\n</head>' },
 	{ input : 'img', output : '<img src="$0" alt="" />' },
