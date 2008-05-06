@@ -51,6 +51,8 @@ Language.snippets = [
 	{ input : 'delete', output : 'delete from $0 where ' },
 	{ input : 'DELETE', output : 'DELETE FROM $0 WHERE ' },	
 	{ input : 'extcombo', output: 'new Ext.form.ComboBox({\n\tstore: new Ext.data.Store({\n\tproxy: new Ext.data.HttpProxy({url: \'resources/query/$0.php\'}),\n\treader:	new Ext.data.JsonReader({id: 1},\n\t\t[\n\t\t\t{name: \'id\'},\n\t\t\t{name: \'\'},\n\t\t])\n\t\t}),\n\tdisplayField:\'\',\n\tvalueField:\'\',\n\thiddenName: \'\',\n\ttypeAhead: true,\n\ttriggerAction:  \'all\',\n\temptyText:\'Select...\',\n\tselectOnFocus:true\n});\n' },
+	{ input : 'extform', output: 'new Ext.FormPanel({\n\tlabelWidth: 75,\n	frame: true,\n	url: \'$0\',\n	title: \'\',\n	items: [\n	],\n\tbuttons: [{\n\t\t\ttext: \'\',\n						handler:function(){\n\t\t\t\t\t}\n\t\t\t\t}]\n\t\t});\n'},
+	{ input : 'extformsubmit', output: '$0.form.submit({\n\\t\t\twaitMsg: \'Please wait whilesaving.......\',\n\t\t\tsuccess: function(){\n\t\t\tExt.Msg.alert(\'Information\',\'Successfully saved.\');\n\t\t\t},\n\t\t\tfailure: function(){\n\t\t\tExt.Msg.alert(\'Error\',\'Error while saving.\');\n\t\t\t}\n\t\t});\n'},
 	{ input : 'loop', output : 'for($i=0;$i<$num;$i++)\n{\n$=mysql_result($result,$i,\'\');\n' },		
 	{ input : 'q', output : '$result = mysql_query("SELECT * FROM $") or die(mysql_error());\n'},
 	{ input : 'po', output : '$$0=$POST[\'\'];' },		
