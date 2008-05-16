@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="fori" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>for (int ${IDX newVarName default="idx"} = 0; ${IDX} &lt; ${ARR array default="arr"}.length; ${IDX}++) {&#13;
+   ${TYPE rightSideType default="Object"} ${ELEM newVarName default="elem"} = ${TYPE_CAST cast default="" editable=false}${ARR}[${IDX}];&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="trycatch" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>try {&#13;
+   ${selection line}${cursor}&#13;
+} catch (${EX_TYPE uncaughtExceptionType default="Exception"} ${EX newVarName default="e"}) {&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="forl" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>for (int ${IDX newVarName default="idx"} = 0; ${IDX} &lt; ${LIST instanceof="java.util.List" default="lst"}.size(); ${IDX}++) {&#13;
+   ${TYPE rightSideType default="Object"} ${ELEM newVarName default="elem"} = ${TYPE_CAST cast default="" editable=false}${LIST}.get(${IDX});&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="sys" xml:space="preserve">
+        <code>System.out.println("${cursor}");</code>
+    </codetemplate>
+    <codetemplate abbreviation="whilen" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>while(${ENUM instanceof="java.util.Enumeration" default="en"}.hasMoreElements()) {&#13;
+   ${TYPE rightSideType default="Object"} ${ELEM newVarName default="elem"} = ${TYPE_CAST cast default="" editable=false} ${ENUM}.nextElement();&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="inst" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>if (${EXP instanceof="java.lang.Object" default="exp"} instanceof ${TYPE default="Object"}) {&#13;
+   ${TYPE} ${VAR newVarName default="obj"} = (${TYPE})${EXP};&#13;
+   ${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="forv" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>for (int ${IDX newVarName default="idx"} = 0; ${IDX} &lt; ${VECTOR instanceof="java.util.Vector" default="vct"}.size(); ${IDX}++) {&#13;
+   ${TYPE rightSideType default="Object"} ${ELEM newVarName default="elem"} = ${TYPE_CAST cast default="" editable=false}${VECTOR}.elementAt(${IDX});&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="runn" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>${RUNN_TYPE type="java.lang.Runnable" default="Runnable" editable=false} ${RUNN newVarName default="r"} = new ${RUNN_TYPE}() {&#13;
+   public void run() {&#13;
+       ${selection line}${cursor}&#13;
+   }&#13;
+};&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="whilexp" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>while (${EXP instanceof="java.lang.Boolean" default="exp"}) { &#13;
+   ${selection line}${cursor} &#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="psvm" xml:space="preserve">
+        <code>public static void main(String[] args) { &#13;
+   ${cursor} &#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="iff" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>if (${EXP instanceof="java.lang.Boolean" default="exp"}) {&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+        <description>if (&lt;b&gt;exp&lt;/b&gt;) { ...| }</description>
+    </codetemplate>
+    <codetemplate abbreviation="forst" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>for (${STR_TOK type="java.util.StringTokenizer" default="StringTokenizer" editable=false} ${TOKENIZER newVarName} = new ${STR_TOK}(${STRING instanceof="java.lang.String"}); ${TOKENIZER}.hasMoreTokens();) {&#13;
+    String ${TOKEN default="token"} = ${TOKENIZER}.nextToken();&#13;
+    ${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="ifelse" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>if (${EXP instanceof="java.lang.Boolean" default="exp"}) {&#13;
+   ${selection line}${cursor}&#13;
+} else {&#13;
+}&#13;
+</code>
+        <description>if (&lt;b&gt;exp&lt;/b&gt;) { ...| } else { ... }</description>
+    </codetemplate>
+    <codetemplate abbreviation="syst" xml:space="preserve">
+        <code>System.out.println();</code>
+    </codetemplate>
+    <codetemplate abbreviation="whileit" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>while(${IT instanceof="java.util.Iterator" default="it"}.hasNext()) {&#13;
+   ${TYPE rightSideType default="Object"} ${ELEM newVarName default="elem"} = ${TYPE_CAST cast default="" editable=false} ${IT}.next();&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="fore" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>for (${TYPE iterableElementType default="Object" editable=false} ${ELEM newVarName default="elem"} : ${ITER iterable default="col"}) {&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="forc" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>for (${IT_TYPE rightSideType type="java.util.Iterator" default="Iterator" editable=false} ${IT newVarName default="it"} = ${COL instanceof="java.util.Collection" default="col"}.iterator(); ${IT}.hasNext();) {&#13;
+   ${TYPE rightSideType default="Object"} ${ELEM newVarName default="elem"} = ${TYPE_CAST cast default="" editable=false}${IT}.next();&#13;
+   ${selection line}${cursor}&#13;
+}&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="dowhile" contexts="BLOCK,CASE" xml:space="preserve">
+        <code>do { &#13;
+   ${selection line}${cursor} &#13;
+} while (${EXP instanceof="java.lang.Boolean" default="exp"});&#13;
+</code>
+    </codetemplate>
+    <codetemplate abbreviation="try" xml:space="preserve">
+        <code>try {&#13;
+   ${selection line}${cursor}&#13;
+} catch (${EX_TYPE uncaughtExceptionType default="Exception"} ${EX newVarName default="e"}) {&#13;
+}&#13;
+</code>
+    </codetemplate>
+</codetemplates>
