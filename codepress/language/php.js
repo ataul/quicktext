@@ -98,7 +98,7 @@ Language.snippets = [
 	{ input : 'form', output : '<form action="$0" method="" name="">\n\t\n</form>' },
 	{ input : 'meta', output : '<meta name="$0" content="" />' },
 	{ input : 'p', output : '<p>$0</p>' },	
-	{ input : 'psmass', output : '\$main_smarty->assign('$0',\$);' },
+	{ input : 'psmass', output : '\$main_smarty->assign(\'$0\',\$);' },
 	{ input : 'pisgod', output : '\$canIhaveAccess = 0;\n    \$canIhaveAccess = \$canIhaveAccess + checklevel(\'god\');\n    if(\$canIhaveAccess == 1) {\n	$\n}'},
 	{ input : 'purl', output : 'my_base_url.my_pligg_base'},
 	{ input : 'span', output : '<span>$0</span>' },
