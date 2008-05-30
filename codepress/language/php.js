@@ -89,6 +89,8 @@ Language.snippets = [
 	{ input : 'base', output : '<base href="$0" />' }, 
 	{ input : 'body', output : '<body>\n\t$0\n</body>' }, 
 	{ input : 'css', output : '<link rel="stylesheet" href="$0" type="text/css" media="screen" charset="utf-8" />' },
+	{ input : 'rndbox', output : '<div class="boxtop"><div><div class="tbg"></div></div></div><div class="boxrbg"><div class="boxlbg"><div class="boxwrap">\n$0\n</div></div></div><div class="boxbot"><div><div class="bbg"></div></div></div>'},
+	{ input : 'rndcss', output : '.boxtop, .boxtop div {\n    height: 8px;\n    font-size: 1px;\n}\n.boxbot div,\n.boxbot{\n    height: 8px;\n    font-size: 1px;\n}\n.boxtop {\n    background: url(images/boxtright.gif) no-repeat top right;\n}\n.boxtop div {\n    background: url(images/boxtleft.gif) no-repeat top left;\n}\n.boxtop .tbg {\n    margin:0px 8px;\n    background: url(images/boxtbg.gif) repeat-x top right;\n}\n.boxbot .bbg {\n   \n margin:0 8px;\n    background: url(images/boxbbg.gif) repeat-x bottom;\n}\n.boxbot div {\n    background: url(images/boxbleft.gif) no-repeat bottom left;\n}\n.boxbot {\n    background: url(images/boxbright.gif) no-repeat bottom right;\n}\n\n.boxrbg {\n    background: url(images/boxrbg.gif) repeat-y top right;\n}\n.boxlbg {\n    background: url(images/boxlbg.gif) repeat-y top left;\n}\n.boxwrap {\n    margin:0pt 8px;\n    padding:5px 8px;\n    background: #F9F7ED;\n}\n'},
 	{ input : 'div', output : '<div>\n\t$0\n</div>' },
 	{ input : 'divid', output : '<div id="$0">\n\t\n</div>' },
 	{ input : 'dl', output : '<dl>\n\t<dt>\n\t\t$0\n\t</dt>\n\t<dd></dd>\n</dl>' },
