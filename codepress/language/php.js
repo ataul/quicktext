@@ -54,6 +54,7 @@ Language.snippets = [
 	{ input : 'extconn', output: 'var c = new Ext.data.Connection;\n\tc.request({\n\t\tmethod: \'GET\', \n\t\turl: \'$0.php?\'+param,\n\t\tcallback: doResponse,\n\t\twaitMsg: \'Please wait ....\'\n\t\t});\n		};\n\n	doResponse = function (object, success, response){\n		if(success) {\n\t\tExt.Msg.alert(\'Success\',\'\');\n				}else{\t\t\t\n\t\t\tExt.Msg.alert(\'Error\',\'Failed! Please try again.\');\n\t\t}\n\t}' },
 	{ input : 'extform', output: 'new Ext.FormPanel({\n\tlabelWidth: 75,\n	frame: true,\n	url: \'$0\',\n	title: \'\',\n	items: [\n	],\n\tbuttons: [{\n\t\t\ttext: \'\',\n						handler:function(){\n\t\t\t\t\t}\n\t\t\t\t}]\n\t\t});\n'},
 	{ input : 'extformsubmit', output: '$0.form.submit({\n\\t\t\twaitMsg: \'Please wait whilesaving.......\',\n\t\t\tsuccess: function(){\n\t\t\tExt.Msg.alert(\'Information\',\'Successfully saved.\');\n\t\t\t},\n\t\t\tfailure: function(){\n\t\t\tExt.Msg.alert(\'Error\',\'Error while saving.\');\n\t\t\t}\n\t\t});\n'},
+	{ input : 'echo', output: 'echo "<br />The value is ".\$$0;' },
 	{ input : 'loop', output : 'for($i=0;$i<$num;$i++)\n{\n$=mysql_result($result,$i,\'\');\n' },		
 	{ input : 'q', output : '$result = mysql_query("SELECT * FROM $") or die(mysql_error());\n'},
 	{ input : 'po', output : '$$0=$POST[\'\'];' },		
