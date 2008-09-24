@@ -4,4 +4,10 @@
     <codetemplate abbreviation="extcombo" xml:space="preserve">
         <code>new Ext.form.ComboBox({\nstore: new Ext.data.Store({\nproxy: new Ext.data.HttpProxy({url: '$.php'}),\nreader:	new Ext.data.JsonReader({id: 1},\n[\n{name: 'id'},\n{name: '$'},\n])\n}),\ndisplayField:'$',\nvalueField:'$id',\nhiddenName: '$',\ntypeAhead: true,\ntriggerAction: 'all',\nemptyText:'Select...',\nselectOnFocus:true\n});\n</code>
     </codetemplate>
+	<codetemplate abbreviation="docid" xml:space="preserve">
+        <code>document.getElementById('$')</code>
+    </codetemplate>
+	<codetemplate abbreviation="ce" xml:space="preserve">
+        <code>var $= document.createElement('');</code>
+    </codetemplate>
 </codetemplates>
