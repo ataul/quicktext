@@ -62,7 +62,7 @@ Language.snippets = [
 	{ input : 'po', output : '$$0=$POST[\'\'];' },		
 	{ input : 'get', output : '$GET[\'\'];' },
 	{ input : 'cook', output : '$COOKIE[\'\'];' },
-	{ input : 'init', output : 'mysql_connect(localhost,"root","");\n@mysql_select_db($) or die( "Unable to select database");' },
+	{ input : 'init', output : 'mysql_connect("localhost","root","");\n@mysql_select_db($) or die( "Unable to select database");' },
 	{ input : 'rq', output: 'resources/query/$0'},
 	{ input : 'ri', output: 'resources/includes/$0'},
 	{ input : 'rc', output: 'resources/components/$0'},
