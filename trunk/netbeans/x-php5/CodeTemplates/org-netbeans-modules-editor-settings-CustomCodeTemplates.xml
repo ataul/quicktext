@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="q" xml:space="preserve">
+        <code><![CDATA[$result = mysql_query() or die(mysql_error());]]></code>
+    </codetemplate>
+	<codetemplate abbreviation="fetch" xml:space="preserve">
+        <code><![CDATA[while(\$row = mysql_fetch_object(\$result)){\n\n}]]></code>
+    </codetemplate>
+	<codetemplate abbreviation="input" xml:space="preserve">
+        <code>&lt;input type="" name="" value="" /&gt;</code>
+    </codetemplate>
+    <codetemplate abbreviation="form" xml:space="preserve">
+        <code>&lt;form action="" method="post"&gt;&#13;
+    &lt;input type="text" name="" /&gt;&#13;
+    &lt;input type="submit" value="" /&gt;&#13;
+&lt;/form&gt;</code>
+    </codetemplate>
+    <codetemplate abbreviation="select" xml:space="preserve">
+        <code>&lt;select&gt;&#13;
+    &lt;option value=""&gt;&lt;/option&gt;&#13;
+&lt;/select&gt;</code>
+    </codetemplate>
+    <codetemplate abbreviation="scriptsrc" xml:space="preserve">
+        <code>&lt;script type="text/javascript" src=""&gt;&lt;/script&gt;</code>
+    </codetemplate>
+    <codetemplate abbreviation="html" xml:space="preserve">
+        <code>&lt;html&gt;&#13;
+    &lt;head&gt;&#13;
+        &lt;title&gt;&lt;/title&gt;&#13;
+    &lt;/head&gt;&#13;
+    &lt;body&gt;&#13;
+    &lt;/body&gt;&#13;
+&lt;/html&gt;&#13;
+    </code>
+    </codetemplate>
+    <codetemplate abbreviation="table" xml:space="preserve">
+        <code>&lt;table&gt;&#13;
+    &lt;tr&gt;&#13;
+        &lt;td&gt;&lt;/td&gt;&#13;
+    &lt;/tr&gt;&#13;
+&lt;/table&gt;</code>
+    </codetemplate>
+    <codetemplate abbreviation="script" xml:space="preserve">
+        <code>&lt;script type="text/javascript"&gt;&#13;
+        &#13;
+&lt;/script&gt;</code>
+    </codetemplate>
+    <codetemplate abbreviation="option" xml:space="preserve">
+        <code>&lt;option value=""&gt;&lt;/option&gt;</code>
+    </codetemplate>
+</codetemplates>

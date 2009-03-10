@@ -105,6 +105,7 @@ Language.snippets = [
 	{ input : 'pisgod', output : '\$canIhaveAccess = 0;\n    \$canIhaveAccess = \$canIhaveAccess + checklevel(\'god\');\n    if(\$canIhaveAccess == 1) {\n	$\n}'},
 	{ input : 'purl', output : 'my_base_url.my_pligg_base'},
 	{ input : 'span', output : '<span>$0</span>' },
+	{ input : 'fetch', output : 'while(\$row = mysql_fetch_object(\$result)){\n\n}'},
 	{ input : 'sset', output : 'sfContext::getInstance()->getRequest()->setParameter(\'$0\', $); ' },
 	{ input : 'sget', output : '$sf_request->getParameter(\'$0\');' },
 	{ input : 'table', output : '<table border="$0" cellspacing="" cellpadding="">\n\t<tr><th></th></tr>\n\t<tr><td></td></tr>\n</table>' },
