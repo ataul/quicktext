@@ -19,8 +19,10 @@ Language.snippets = [
 	{ input : 'do', output : 'do{\n\t$0\n}\nwhile();' },
 	{ input : 'for', output : 'for(int i=0;i<$0;i++)\n{\n\n}' },
 	{ input : 'sys', output : 'System.out.println("$0");'},
+	{ input : 'sout', output : 'System.out.println("$0");'},
 	{ input : 'syst', output : 'System.out.println($$0);'},
-	{ input : 'try', output : 'try{\n\t$0\n}\ncatch(Exception e)\n\t{\n}'}	
+	{ input : 'try', output : 'try{\n\t$0\n}\ncatch(Exception e)\n\t{\n}'},
+	{ input : 'dom', output : 'DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();\n        DocumentBuilder builder =fact.newDocumentBuilder();\n        Document doc = builder.parse("$0");\n        Node root =doc.getDocumentElement();        		\n		NodeList children = root.getChildNodes();\n		for (int i = 0; i < children.getLength(); i++){\n			Node n = children.item(i);\n				//System.out.println(n.getNodeName());\n		}' }	
 ]
 
 Language.complete = [

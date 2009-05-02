@@ -82,14 +82,11 @@ public class Conv {
 			}
 			while(!input.equals(""));
 			
-			String[] arr=new String[v.size()-1];
-			String[] arr2=new String[v.size()-1];
-			for(int i=0;i<v.size()-1;i++)
-			{
-				String mixed = (String) v.elementAt(i);
-				String[] mixedArray = mixed.split("|");
-				arr[i]=mixedArray[0];
-				arr2[i] = mixedArray[1];
+			String[] arr=new String[(int) v.size()/2];
+			String[] arr2=new String[(int) v.size()/2];
+			for(int i=0;i<v.size()-1;i+=2){							
+				arr[i]= (String) v.elementAt(i);					
+				arr2[i] =  (String) v.elementAt(i+1);								
 			}
 			Abbreviation=arr;
 			Code = arr2;

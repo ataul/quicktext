@@ -124,4 +124,9 @@
 }&#13;
 </code>
     </codetemplate>
+	
+	<codetemplate abbreviation="dom" xml:space="preserve">
+		<code>DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();&#13;        DocumentBuilder builder =fact.newDocumentBuilder();&#13;        ${selection line}Document doc = builder.parse("${cursor}");&#13;        Node root =doc.getDocumentElement();        		&#13;		NodeList children = root.getChildNodes();&#13;		for (int i = 0; i < children.getLength(); i++){&#13;			Node n = children.item(i);&#13;				//System.out.println(n.getNodeName());&#13;		}</code>
+	</codetemplate>
+	
 </codetemplates>
