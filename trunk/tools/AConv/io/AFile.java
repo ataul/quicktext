@@ -14,7 +14,7 @@ import java.io.*;
  * @first_created May 13, 2008
  * @last_modified May 13, 2008
  */
-public class FileOp {
+public class AFile {
         private FileOutputStream fout;	
 
 	public void OpenFile(String FileName)

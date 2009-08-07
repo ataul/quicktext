@@ -16,12 +16,12 @@ public class Conv {
 	String Code[];
 	String b;
 	String version;
-	FileOp file;
+	AFile file;
 	
 	public Conv(){
 		b = new String();
 		version = "0.2";
-		this.file = new FileOp();
+		this.file = new AFile();
 	}
 	
 	public void toCodePress(String FileName){
