@@ -49,4 +49,38 @@
     <codetemplate abbreviation="option" xml:space="preserve">
         <code>&lt;option value=""&gt;&lt;/option&gt;</code>
     </codetemplate>
+	<codetemplate abbreviation="jexec" xml:space="preserve">
+	<code>defined('_JEXEC') or die('Restricted access');</code>
+	</codetemplate>
+	<codetemplate abbreviation="jq" xml:space="preserve">
+		<code>$db = & JFactory::getDBO();\n$query = "SELECT * FROM #__$";\n$db->setQuery($query);</code>
+	</codetemplate>
+	<codetemplate abbreviation="jfetch" xml:space="preserve">
+		<code>$result = $db->loadObjectList();</code>
+	</codetemplate>
+	<codetemplate abbreviation="jimp" xml:space="preserve">
+		<code>jimport('joomla.application.component.$');</code>
+	</codetemplate>
+	<codetemplate abbreviation="jass" xml:space="preserve">
+		<code>$this->assignRef('$',\$$);</code>
+	</codetemplate>
+	<codetemplate abbreviation="ado" xml:space="preserve">
+		<code>&lt;audio src="$"&gt;&lt;/audio&gt;</code>
+	</codetemplate>
+	<codetemplate abbreviation="vdo" xml:space="preserve">
+		<code>&lt;video src="$"&gt;&lt;/video&gt;</code>
+	</codetemplate>
+	<codetemplate abbreviation="sec" xml:space="preserve">
+		<code>&lt;section&gt;$&lt;/section&gt;</code>
+	</codetemplate>
+	<codetemplate abbreviation="nav" xml:space="preserve">
+		<code>&lt;nav&gt;$&lt;/nav&gt;</code>
+	</codetemplate>
+	<codetemplate abbreviation="footr" xml:space="preserve">
+		<code>&lt;footer&gt;$&lt;/footer&gt;</code>
+	</codetemplate>
+	<codetemplate abbreviation="headr" xml:space="preserve">
+		<code>&lt;header&gt;$&lt;/header</code>
+	</codetemplate>
+
 </codetemplates>
