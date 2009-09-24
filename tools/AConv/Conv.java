@@ -64,6 +64,12 @@ public class Conv {
 		}
 		file.CloseFile();
 	}
+	public void toEcllipse(String FileName){
+		file.OpenFile(FileName);
+		for(int i=0;i<Abbreviation.length;i++){
+		
+		}
+	}
 	public void getDataConsole()
 	{
 		System.out.println("/*****************************************************/");
