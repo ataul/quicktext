@@ -82,5 +82,22 @@
 	<codetemplate abbreviation="headr" xml:space="preserve">
 		<code>&lt;header&gt;$&lt;/header</code>
 	</codetemplate>
-
+	<codetemplate abbreviation="sfcss" xml:space="preserve">
+	<code><?php echo stylesheet_tag('$');?></code>
+	</codetemplate>
+	<codetemplate abbreviation="sfjs" xml:space="preserve">
+		<code><?php echo javascript_include_tag('$');?></code>
+	</codetemplate>
+	<codetemplate abbreviation="sfq" xml:space="preserve">
+		<code>$connection = Propel::getConnection();\n$sql = "SELECT * FROM $";\n$stmt = $connection->prepareStatement($sql);\n$resultSet = $stmt->executeQuery();</code>
+	</codetemplate>
+	<codetemplate abbreviation="sffetch" xml:space="preserve">
+		<code>while($resultSet->next()){\n $$=$resultSet->getString('$');\n}</code>
+	</codetemplate>
+	<codetemplate abbreviation="sfimg" xml:space="preserve">
+		<code><?php echo image_tag('$');?></code>
+	</codetemplate>
+	<codetemplate abbreviation="sflink" xml:space="preserve">
+		<code><?php echo link_to('$');?></code>
+	</codetemplate>
 </codetemplates>
