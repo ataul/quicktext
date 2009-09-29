@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+&lt;xml version="1.0" encoding="UTF-8"?&gt;
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
     <codetemplate abbreviation="q" xml:space="preserve">
@@ -83,10 +83,10 @@
 		<code>&lt;header&gt;$&lt;/header</code>
 	</codetemplate>
 	<codetemplate abbreviation="sfcss" xml:space="preserve">
-	<code><?php echo stylesheet_tag('$');?></code>
+	<code>&lt;?php echo stylesheet_tag('$');?&gt;</code>
 	</codetemplate>
 	<codetemplate abbreviation="sfjs" xml:space="preserve">
-		<code><?php echo javascript_include_tag('$');?></code>
+		<code>&lt;?php echo javascript_include_tag('$');?&gt;</code>
 	</codetemplate>
 	<codetemplate abbreviation="sfq" xml:space="preserve">
 		<code>$connection = Propel::getConnection();\n$sql = "SELECT * FROM $";\n$stmt = $connection->prepareStatement($sql);\n$resultSet = $stmt->executeQuery();</code>
@@ -95,9 +95,15 @@
 		<code>while($resultSet->next()){\n $$=$resultSet->getString('$');\n}</code>
 	</codetemplate>
 	<codetemplate abbreviation="sfimg" xml:space="preserve">
-		<code><?php echo image_tag('$');?></code>
+		<code>&lt;?php echo image_tag('$');?&gt;</code>
 	</codetemplate>
 	<codetemplate abbreviation="sflink" xml:space="preserve">
-		<code><?php echo link_to('$');?></code>
+		<code>&lt;?php echo link_to('$');?&gt;</code>
+	</codetemplate>
+	<codetemplate abbreviation="sfparam" xml:space="preserve">
+	<code>$=$this->getRequestParameter('');</code>
+	</codetemplate>
+	<codetemplate abbreviation="sfselect" xml:space="preserve">
+		<code>$c = new Criteria();\n$c->add($Peer::ID,$id);$this->$=$Peer::doSelect($c);</code>
 	</codetemplate>
 </codetemplates>
