@@ -84,6 +84,7 @@ Language.snippets = [
 	{ input : 'sfparam', output : '$0=$this->getRequestParameter('');' },
 	{ input : 'sfselect', output : '$c = new Criteria();\n$c->add($0Peer::ID,$id);$this->$=$Peer::doSelect($c);' },
 	{ input : 'aref', output : '<a href="$0"></a>' },
+	{ input : 'sfupload', output : '<?php\n echo form_tag(\'media/upload\',\'multipart=true\');\n echo input_file_tag(\'file\'); echo submit_tag('Send');?></form>\n\n\n $fileName = $this->getRequest()->getFileName(\'file\');\n $this->getRequest()->moveFile(\'file\',sfConfig::get(\'sf_upload_dir\'.\'/\'.$fileName);' },
 	{ input : 'h1', output : '<h1>$0</h1>' },
 	{ input : 'h2', output : '<h2>$0</h2>' },
 	{ input : 'h3', output : '<h3>$0</h3>' },
