@@ -106,4 +106,8 @@
 	<codetemplate abbreviation="sfselect" xml:space="preserve">
 		<code>$c = new Criteria();\n$c->add($Peer::ID,$id);$this->$=$Peer::doSelect($c);</code>
 	</codetemplate>
+	<codetemplate abbreviation="sfupload" xml:space="preserve">
+	<code>&lt;?php\n echo form_tag('media/upload','multipart=true');\n echo input_file_tag('file'); echo submit_tag('Send');?&gt;</form>\n\n\n $fileName = $this->getRequest()->getFileName('file');\n $this->getRequest()->moveFile('file',sfConfig::get('sf_upload_dir'.'/'.$fileName);</code>
+	</codetemplate>
+
 </codetemplates>
