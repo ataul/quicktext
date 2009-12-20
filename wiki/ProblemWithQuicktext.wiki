@@ -1,6 +1,5 @@
-#labels Featured
 #ctrl+enter does not work in notepad++
-
+(NEW VERSION NOW USES TAB INSTEAD OF CTRL+ENTER)
 It's because of the use of that shortcut(ctrl+enter) by "Word completion"
 
 = Detail =
