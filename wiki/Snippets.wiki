@@ -1,0 +1,3 @@
+There are many snippets available and more are added randomly. This page will provide some guideline about these snippets.
+
+First of all most commands are added whenever necessary, so it is quite hard to make it consistent. Mainly php is mostly maintained and it will...................
