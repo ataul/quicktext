@@ -1,7 +1,7 @@
 /**
  * @author Ataul
  * @first_created September 3, 2008
- * @last_updated September 24, 2008
+ * @last_updated September 4, 2010
  */
 
 package AConv;
@@ -56,7 +56,9 @@ public class Conv {
 			b+="\" xml:space=\"preserve\">";
 			file.writeFile(b);
 			b="	<code>";
-			b+=Code[i];
+			String code = Code[i];
+			code.replace("$","${cursor}");
+			b+=code;
 			b+="</code>";
 			file.writeFile(b);
 			b="</codetemplate>";
