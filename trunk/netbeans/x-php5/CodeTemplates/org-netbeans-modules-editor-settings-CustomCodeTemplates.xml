@@ -1,113 +1,1150 @@
-&lt;xml version="1.0" encoding="UTF-8"?&gt;
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
 <codetemplates>
-    <codetemplate abbreviation="q" xml:space="preserve">
-        <code><![CDATA[$result = mysql_query() or die(mysql_error());]]></code>
-    </codetemplate>
-	<codetemplate abbreviation="fetch" xml:space="preserve">
-        <code><![CDATA[while(\$row = mysql_fetch_object(\$result)){\n\n}]]></code>
-    </codetemplate>
-	<codetemplate abbreviation="input" xml:space="preserve">
-        <code>&lt;input type="" name="" value="" /&gt;</code>
-    </codetemplate>
-    <codetemplate abbreviation="form" xml:space="preserve">
-        <code>&lt;form action="" method="post"&gt;&#13;
-    &lt;input type="text" name="" /&gt;&#13;
-    &lt;input type="submit" value="" /&gt;&#13;
-&lt;/form&gt;</code>
-    </codetemplate>
-    <codetemplate abbreviation="select" xml:space="preserve">
-        <code>&lt;select&gt;&#13;
-    &lt;option value=""&gt;&lt;/option&gt;&#13;
-&lt;/select&gt;</code>
-    </codetemplate>
-    <codetemplate abbreviation="scriptsrc" xml:space="preserve">
-        <code>&lt;script type="text/javascript" src=""&gt;&lt;/script&gt;</code>
-    </codetemplate>
-    <codetemplate abbreviation="html" xml:space="preserve">
-        <code>&lt;html&gt;&#13;
-    &lt;head&gt;&#13;
-        &lt;title&gt;&lt;/title&gt;&#13;
-    &lt;/head&gt;&#13;
-    &lt;body&gt;&#13;
-    &lt;/body&gt;&#13;
-&lt;/html&gt;&#13;
-    </code>
-    </codetemplate>
-    <codetemplate abbreviation="table" xml:space="preserve">
-        <code>&lt;table&gt;&#13;
-    &lt;tr&gt;&#13;
-        &lt;td&gt;&lt;/td&gt;&#13;
-    &lt;/tr&gt;&#13;
-&lt;/table&gt;</code>
-    </codetemplate>
-    <codetemplate abbreviation="script" xml:space="preserve">
-        <code>&lt;script type="text/javascript"&gt;&#13;
-        &#13;
-&lt;/script&gt;</code>
-    </codetemplate>
-    <codetemplate abbreviation="option" xml:space="preserve">
-        <code>&lt;option value=""&gt;&lt;/option&gt;</code>
-    </codetemplate>
-	<codetemplate abbreviation="jexec" xml:space="preserve">
-	<code>defined('_JEXEC') or die('Restricted access');</code>
-	</codetemplate>
-	<codetemplate abbreviation="jq" xml:space="preserve">
-		<code>$db = & JFactory::getDBO();\n$query = "SELECT * FROM #__$";\n$db->setQuery($query);</code>
-	</codetemplate>
-	<codetemplate abbreviation="jfetch" xml:space="preserve">
-		<code>$result = $db->loadObjectList();</code>
-	</codetemplate>
-	<codetemplate abbreviation="jimp" xml:space="preserve">
-		<code>jimport('joomla.application.component.$');</code>
-	</codetemplate>
-	<codetemplate abbreviation="jass" xml:space="preserve">
-		<code>$this->assignRef('$',\$$);</code>
-	</codetemplate>
-	<codetemplate abbreviation="ado" xml:space="preserve">
-		<code>&lt;audio src="$"&gt;&lt;/audio&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="vdo" xml:space="preserve">
-		<code>&lt;video src="$"&gt;&lt;/video&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="sec" xml:space="preserve">
-		<code>&lt;section&gt;$&lt;/section&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="nav" xml:space="preserve">
-		<code>&lt;nav&gt;$&lt;/nav&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="footr" xml:space="preserve">
-		<code>&lt;footer&gt;$&lt;/footer&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="headr" xml:space="preserve">
-		<code>&lt;header&gt;$&lt;/header</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfcss" xml:space="preserve">
-	<code>&lt;?php echo stylesheet_tag('$');?&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfjs" xml:space="preserve">
-		<code>&lt;?php echo javascript_include_tag('$');?&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfq" xml:space="preserve">
-		<code>$connection = Propel::getConnection();\n$sql = "SELECT * FROM $";\n$stmt = $connection->prepareStatement($sql);\n$resultSet = $stmt->executeQuery();</code>
-	</codetemplate>
-	<codetemplate abbreviation="sffetch" xml:space="preserve">
-		<code>while($resultSet->next()){\n $$=$resultSet->getString('$');\n}</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfimg" xml:space="preserve">
-		<code>&lt;?php echo image_tag('$');?&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="sflink" xml:space="preserve">
-		<code>&lt;?php echo link_to('$');?&gt;</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfparam" xml:space="preserve">
-	<code>$=$this->getRequestParameter('');</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfselect" xml:space="preserve">
-		<code>$c = new Criteria();\n$c->add($Peer::ID,$id);$this->$=$Peer::doSelect($c);</code>
-	</codetemplate>
-	<codetemplate abbreviation="sfupload" xml:space="preserve">
-	<code>&lt;?php\n echo form_tag('media/upload','multipart=true');\n echo input_file_tag('file'); echo submit_tag('Send');?&gt;</form>\n\n\n $fileName = $this->getRequest()->getFileName('file');\n $this->getRequest()->moveFile('file',sfConfig::get('sf_upload_dir'.'/'.$fileName);</code>
-	</codetemplate>
+<codetemplate abbreviation="hello" xml:space="preserve">
+	<code><![CDATA[world]]></code>
+</codetemplate>
+<codetemplate abbreviation="a" xml:space="preserve">
+	<code><![CDATA[<?= anchor('${cursor}', '${cursor}'); ?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="ado" xml:space="preserve">
+	<code><![CDATA[<audio src="${cursor}"></audio>]]></code>
+</codetemplate>
+<codetemplate abbreviation="audio" xml:space="preserve">
+	<code><![CDATA[<audio src="${cursor}"></audio>]]></code>
+</codetemplate>
+<codetemplate abbreviation="b" xml:space="preserve">
+	<code><![CDATA[<b>${cursor}</b>]]></code>
+</codetemplate>
+<codetemplate abbreviation="black" xml:space="preserve">
+	<code><![CDATA[#000000]]></code>
+</codetemplate>
+<codetemplate abbreviation="blue" xml:space="preserve">
+	<code><![CDATA[#0000FF]]></code>
+</codetemplate>
+<codetemplate abbreviation="body" xml:space="preserve">
+<code><![CDATA[
+<body>
+	${cursor}
+</body>]]></code>
+</codetemplate>
+<codetemplate abbreviation="br" xml:space="preserve">
+	<code><![CDATA[
+<br />
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="button" xml:space="preserve">
+	<code><![CDATA[
+<button onclick="${cursor}()">${cursor}</button>]]></code>
+</codetemplate>	
+<codetemplate abbreviation="c" xml:space="preserve">
+	<code><![CDATA['.$${cursor}.'${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="case" xml:space="preserve">
+	<code><![CDATA[
+case '${cursor}':
+	${cursor}
+break;]]></code>
+</codetemplate>
+<codetemplate abbreviation="ce" xml:space="preserve">
+	<code><![CDATA[
+var ${cursor} = document.createElement('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="ciass" xml:space="preserve">
+	<code><![CDATA[
+$data['${cursor}']	= $this->lang->line('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="cic" xml:space="preserve">
+	<code><![CDATA[
+class ${cursor} extends Controller {
+
+    function __construct() {
+        parent::Controller();
+    }
+
+    function index() {
+        ${cursor}
+    }
+
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="cicset" xml:space="preserve">
+	<code><![CDATA[
+$this->config->set_item('${cursor}', '${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="cid" xml:space="preserve">
+	<code><![CDATA[
+$data['${cursor}'] = ${cursor};]]></code>
+</codetemplate>
+<codetemplate abbreviation="ciemail" xml:space="preserve">
+	<code><![CDATA[
+$msg = ${cursor};
+$this->email->from('${cursor}', '${cursor}');
+$this->email->to('${cursor}');
+$this->email->subject('${cursor}');
+$this->email->message($msg);
+$this->email->send();]]></code>
+</codetemplate>
+<codetemplate abbreviation="ciform" xml:space="preserve">
+	<code><![CDATA[
+<?= form_open('${cursor}'); ?>
+    ${cursor}
+<?= form_close(); ?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="ciget" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $this->request->get[''];]]></code>
+</codetemplate>
+<codetemplate abbreviation="cigitem" xml:space="preserve">
+	<code><![CDATA[
+$this->config->item('${cursor}')]]></code>
+</codetemplate>
+<codetemplate abbreviation="cilang" xml:space="preserve">
+	<code><![CDATA[
+$this->lang->line('${cursor}')]]></code>
+</codetemplate>
+<codetemplate abbreviation="cim" xml:space="preserve">
+	<code><![CDATA[
+class ${cursor}_m extends Model {
+
+    function __construct() {
+        parent::Model();
+    }
+
+    ${cursor}
+
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="cip" xml:space="preserve">
+	<code><![CDATA[
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+${cursor}
+
+?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="cipo" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $this->input->post('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="cisess" xml:space="preserve">
+	<code><![CDATA[
+$this->session->set_userdata(${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="cisget" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $this->session->userdata['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="cisset" xml:space="preserve">
+	<code><![CDATA[
+$this->session->set_userdata('${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="ciupload" xml:space="preserve">
+	<code><![CDATA[
+$config['upload_path'] = '${cursor}';
+$config['allowed_types'] = '${cursor}';
+$this->load->library('upload', '$config');
+
+if (${cursor}this->upload->do_upload()) {
+    ${cursor}
+} else {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="comment" xml:space="preserve">
+	<code><![CDATA[
+<!-- ${cursor} -->
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="cook" xml:space="preserve">
+	<code><![CDATA[
+$${cursor}=$_COOKIE['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="css" xml:space="preserve">
+	<code><![CDATA[
+<link rel="stylesheet" type="text/css" href="${cursor}.css" />]]></code>
+</codetemplate>
+<codetemplate abbreviation="curl" xml:space="preserve">
+	<code><![CDATA[
+$url = 'http://${cursor}';
+$data = '${cursor}=${cursor}';
+$request = curl_init($url);
+curl_setopt($request, CURLOPT_HEADER, 0);
+curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($request, CURLOPT_POSTFIELDS, $data);
+curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE);
+$response = curl_exec($request);
+curl_close($request);]]></code>
+</codetemplate>
+<codetemplate abbreviation="cv" xml:space="preserve">
+	<code><![CDATA[
+'.$${cursor}.'${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="cyan" xml:space="preserve">
+	<code><![CDATA[
+#00FFFF]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbase" xml:space="preserve">
+	<code><![CDATA[
+base_path()${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbc" xml:space="preserve">
+	<code><![CDATA[
+@mysql_connect("localhost","root","") or die("Unable to connect");
+@mysql_select_db("${cursor}") or die( "Unable to select database");]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbcount" xml:space="preserve">
+	<code><![CDATA[
+$this->db->count_all('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbdelete" xml:space="preserve">
+	<code><![CDATA[
+$this->db->delete('${cursor}', array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbfrom" xml:space="preserve">
+	<code><![CDATA[
+$this->db->from('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbget" xml:space="preserve">
+	<code><![CDATA[
+$this->db->get('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbgetwhere" xml:space="preserve">
+	<code><![CDATA[
+$this->db->getwhere('${cursor}', array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbgroup" xml:space="preserve">
+	<code><![CDATA[
+$this->db->groupby(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbhaving" xml:space="preserve">
+	<code><![CDATA[
+$this->db->having(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbinsert" xml:space="preserve">
+	<code><![CDATA[
+$insert = array(${cursor});
+
+$this->db->insert('${cursor}', $insert);]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbjoin" xml:space="preserve">
+	<code><![CDATA[
+$this->db->join('${cursor}', '${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dblike" xml:space="preserve">
+	<code><![CDATA[
+$this->db->like(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dblimit" xml:space="preserve">
+	<code><![CDATA[
+$this->db->limit(${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="dborder" xml:space="preserve">
+	<code><![CDATA[
+$this->db->orderby('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dborlike" xml:space="preserve">
+	<code><![CDATA[
+$this->db->orlike(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dborwhere" xml:space="preserve">
+	<code><![CDATA[
+$this->db->orwhere(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbquery" xml:space="preserve">
+	<code><![CDATA[
+$sql = "${cursor}";
+$result =$db->query($sql);
+if (DB::isError($result)) {
+	echo $sql;
+	    die($result->getMessage());        
+	}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbresult" xml:space="preserve">
+	<code><![CDATA[
+$arr = array();
+	while ($row =
+$result->fetchRow(DB_FETCHMODE_ASSOC)){
+    $arr[] = $row;
+	}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbselect" xml:space="preserve">
+	<code><![CDATA[
+$this->db->select('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbset" xml:space="preserve">
+	<code><![CDATA[
+$this->db->set(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbupdate" xml:space="preserve">
+	<code><![CDATA[
+$update = array(${cursor});
+
+$this->db->update('${cursor}', $update);]]></code>
+</codetemplate>
+<codetemplate abbreviation="dbwhere" xml:space="preserve">
+	<code><![CDATA[
+$this->db->where('${cursor}', array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dcss" xml:space="preserve">
+	<code><![CDATA[
+drupal_add_css(drupal_get_path('module', '${cursor}').'/${cursor}.css');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dd" xml:space="preserve">
+	<code><![CDATA[
+<dd>
+	${cursor}
+</dd>]]></code>
+</codetemplate>
+<codetemplate abbreviation="decho" xml:space="preserve">
+	<code><![CDATA[
+<?php echo t('${cursor}');?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="deco" xml:space="preserve">
+	<code><![CDATA[
+echo t('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="def" xml:space="preserve">
+	<code><![CDATA[
+define('${cursor}',${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="default" xml:space="preserve">
+	<code><![CDATA[
+default ${cursor}: ${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dfetch" xml:space="preserve">
+	<code><![CDATA[
+if($result->num_rows>0){
+	while($row=db_fetch_object($result)){
+	${cursor}
+	}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dform" xml:space="preserve">
+	<code><![CDATA[
+function ${cursor}_form() {
+	$form['submit'] = array(
+      '#type'       => 'submit',
+      '#value'      => t('Save')
+	);
+  return $form;
+}
+function ${cursor}_form_submit($form, &$form_state) {
+    
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dget" xml:space="preserve">
+	<code><![CDATA[
+$q = $_GET['q'];
+$q = explode('/',$q);
+$id = $q[sizeof($q)-1];]]></code>
+</codetemplate>
+<codetemplate abbreviation="dgetform" xml:space="preserve">
+	<code><![CDATA[
+drupal_get_form('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dgo" xml:space="preserve">
+	<code><![CDATA[
+drupal_goto('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dgoto" xml:space="preserve">
+	<code><![CDATA[
+if($${cursor}){
+	drupal_set_message(t('Successfully saved'),'status');
+}else{
+	drupal_set_message(t('Sorry! An error occured. Please try again.'),'warning');
+}
+drupal_goto('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dinput" xml:space="preserve">
+	<code><![CDATA[
+$form['${cursor}'] = array(
+	'#title' => t('${cursor}'),
+	'#description' => t('${cursor}'),
+	'#type' => '${cursor}',
+	'#default_value' => '${cursor}',
+	);]]></code>
+</codetemplate>
+<codetemplate abbreviation="ditem" xml:space="preserve">
+	<code><![CDATA[
+$items['${cursor}'] = array(
+    'title' => t('${cursor}'),
+    'description' => t('${cursor}'),
+    'page callback' => '${cursor}',
+    'access arguments' => array('view ${cursor}'),
+    'type' => MENU_CALLBACK,
+   );]]></code>
+</codetemplate>
+<codetemplate abbreviation="div" xml:space="preserve">
+	<code><![CDATA[
+<div>
+	${cursor}
+</div>]]></code>
+</codetemplate>
+<codetemplate abbreviation="divc" xml:space="preserve">
+	<code><![CDATA[
+<div class="${cursor}">
+	${cursor}
+</div>]]></code>
+</codetemplate>
+<codetemplate abbreviation="divi" xml:space="preserve">
+	<code><![CDATA[
+<div id="${cursor}">
+	${cursor}
+</div>]]></code>
+</codetemplate>
+<codetemplate abbreviation="divs" xml:space="preserve">
+	<code><![CDATA[
+<div style="${cursor}">
+	${cursor}
+</div>]]></code>
+</codetemplate>
+<codetemplate abbreviation="djs" xml:space="preserve">
+	<code><![CDATA[
+drupal_add_js(drupal_get_path('module', '${cursor}').'/${cursor}.css');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dl" xml:space="preserve">
+	<code><![CDATA[
+<dl>
+	<dt>
+	${cursor}
+	</dt>
+	<dd>
+	${cursor}
+	</dd>
+</dl>]]></code>
+</codetemplate>
+<codetemplate abbreviation="dlink" xml:space="preserve">
+	<code><![CDATA[
+l(t('${cursor}'),'${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dmail" xml:space="preserve">
+	<code><![CDATA[
+$message = array(
+	'to' => $${cursor},
+	'subject' => t('${cursor}'),
+	'body' => '${cursor}',
+	'headers' => array('From' => '${cursor}@.com'),
+	'MIME-Version' => '1.0',
+	'Content-Type' => 'text/html; charset=UTF-8; format=flowed',
+	'Content-Transfer-Encoding' => '8Bit',
+	'X-Mailer' => 'Drupal'
+	);
+drupal_mail_send($message);]]></code>
+</codetemplate>
+<codetemplate abbreviation="dmenu" xml:space="preserve">
+	<code><![CDATA[
+function ${cursor}_menu() {
+  $items = array();    
+  $items['${cursor}'] = array(
+    'title' => t('${cursor}'),
+    'description' => t('${cursor}'),
+    'page callback' => '${cursor}',
+    'access arguments' => array('view ${cursor}'),
+    'type' => MENU_CALLBACK,
+   );   
+  return $items;
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dmsg" xml:space="preserve">
+	<code><![CDATA[
+drupal_set_message(t('${cursor}'),'status');]]></code>
+</codetemplate>
+<codetemplate abbreviation="docid" xml:space="preserve">
+	<code><![CDATA[
+document.getElementById('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="docroot" xml:space="preserve">
+	<code><![CDATA[
+$doc_root = $_SERVER['DOCUMENT_ROOT'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="done" xml:space="preserve">
+	<code><![CDATA[
+$sql = "SELECT * FROM {${cursor}}";
+$result = db_query($sql);
+$row=db_fetch_object($result);]]></code>
+</codetemplate>
+<codetemplate abbreviation="dout" xml:space="preserve">
+	<code><![CDATA[
+$output .= ${cursor};]]></code>
+</codetemplate>
+<codetemplate abbreviation="dowhile" xml:space="preserve">
+	<code><![CDATA[
+do
+{
+	${cursor}
+}
+while (${cursor});
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dowhiles" xml:space="preserve">
+	<code><![CDATA[
+do
+	${cursor}
+while (${cursor});
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dpo" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} =$form_state['values']['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="dpq" xml:space="preserve">
+	<code><![CDATA[
+$sql = "SELECT * FROM {${cursor}}";
+$result = pager_query($sql,${cursor});
+${cursor}output .= theme('pager');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dprice" xml:space="preserve">
+	<code><![CDATA[
+array('data'=>number_format($${cursor},2),'style'=>'text-align:right;')]]></code>
+</codetemplate>
+<codetemplate abbreviation="dq" xml:space="preserve">
+	<code><![CDATA[
+$sql = " ${cursor} ";
+$result = db_query($sql);]]></code>
+</codetemplate>
+<codetemplate abbreviation="dres" xml:space="preserve">
+	<code><![CDATA[
+$sql = "SELECT ${cursor} FROM {${cursor}}";
+$${cursor} = db_result(db_query($sql));]]></code>
+</codetemplate>
+<codetemplate abbreviation="dscript" xml:space="preserve">
+	<code><![CDATA[
+drupal_add_js(drupal_get_path('module', '${cursor}').'/${cursor}.js');]]></code>
+</codetemplate>
+<codetemplate abbreviation="dselect" xml:space="preserve">
+	<code><![CDATA[
+$result = db_select('${cursor}','${cursor}')
+->fields(${cursor})
+->${cursor}
+->execute()
+->fetchAssoc();]]></code>
+</codetemplate>
+<codetemplate abbreviation="dt" xml:space="preserve">
+	<code><![CDATA[
+<dt>
+	${cursor}
+</dt>]]></code>
+</codetemplate>
+<codetemplate abbreviation="dtable" xml:space="preserve">
+	<code><![CDATA[
+$headers=array(t('${cursor}'),t('${cursor}'));
+$output = theme('table',$headers,$rows);]]></code>
+</codetemplate>
+<codetemplate abbreviation="dtf" xml:space="preserve">
+	<code><![CDATA[
+t('${cursor}')]]></code>
+</codetemplate>
+<codetemplate abbreviation="duid" xml:space="preserve">
+	<code><![CDATA[
+global $user;
+$uid = $user->uid;
+if($uid==0){
+	drupal_goto('user/login');
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dupload" xml:space="preserve">
+	<code><![CDATA[
+function ${cursor}_form() {
+	$form['#attributes'] = array('enctype' => 'multipart/form-data');
+	$form['file'] = array(
+		'#title' => t('File'),
+		'#description' => t('Upload file'),
+		'#type' => 'file',
+		'#default_value' => '',
+		);
+	$form['submit'] = array(
+      '#type'       => 'submit',
+      '#value'      => t('Upload')
+	);
+  return $form;
+}
+function ${cursor}_form_submit($form, &$form_state) {
+	$validators = array(
+            'file_validate_extensions' => array('jpg')
+        );
+    $file = $_FILES['files'];	
+	if($file){		
+		if($file = file_save_upload('file', $validators, file_directory_path(), FALSE)) {
+			drupal_set_message(t('File successfully upload.'),'status');
+		}else{
+			drupal_set_message(t('Failed to upload.'),'warning');
+		}
+	}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="dvget" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = variable_get('${cursor}','${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="e" xml:space="preserve">
+	<code><![CDATA[
+echo '${cursor}';]]></code>
+</codetemplate>
+<codetemplate abbreviation="echo" xml:space="preserve">
+	<code><![CDATA[
+echo "<br />The value is ".$${cursor};]]></code>
+</codetemplate>
+<codetemplate abbreviation="efblock" xml:space="preserve">
+	<code><![CDATA[
+<div class="block">
+	<div class="blockContents">
+	  <div class="title" >${cursor}</div>
+	  <span class="subtitle"></span>
+	  <span style="display:none">&nbsp;</span>
+		<div class="content" >
+			${cursor}
+		</div>
+	</div>
+</div>	]]></code>
+</codetemplate>
+<codetemplate abbreviation="efdel" xml:space="preserve">
+	<code><![CDATA[
+eF_deleteTableData("${cursor}", "id=".$${cursor}id);]]></code>
+</codetemplate>
+<codetemplate abbreviation="efinsert" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = array(
+					'${cursor}'=>$_POST['${cursor}'],
+				);
+		eF_insertTableData("${cursor}", $${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="efq" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = eF_getTableData("${cursor}", "*" );]]></code>
+</codetemplate>
+<codetemplate abbreviation="efupdate" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = array(
+					'${cursor}'=>$_POST['${cursor}'],
+				);
+		eF_updateTableData("${cursor}", $${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="else" xml:space="preserve">
+	<code><![CDATA[
+else
+{
+	${cursor}
+}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="elseif" xml:space="preserve">
+	<code><![CDATA[
+else if (${cursor})
+{
+	${cursor}
+}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="elseifs" xml:space="preserve">
+	<code><![CDATA[
+else if (${cursor})
+	${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="elses" xml:space="preserve">
+	<code><![CDATA[
+else
+	${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="email" xml:space="preserve">
+	<code><![CDATA[
+$headers  = 'MIME-Version: 1.0' . "\rn";
+$headers .= 'Content-type: text/html; charset=utf-8' . "\rn";
+mail($mail,$subject,$body,$headers);]]></code>
+</codetemplate>
+<codetemplate abbreviation="enum" xml:space="preserve">
+	<code><![CDATA[
+function enum_select($table,$field) {
+    $result=mysql_query("SHOW COLUMNS FROM `$table` LIKE '$field'");
+    if(mysql_num_rows($result)>0){
+        $row=mysql_fetch_row($result);
+        $options=explode("','", preg_replace("/(enum|set)\('(.+?)'\)/","\\2", $row[1]));
+        $options2 = array();
+		$i=0;
+        foreach ($options as $value) {
+            $options2[$i]=$value;
+			$i++;            
+        }        
+    } else {
+        $options=array();
+    }
+    return $options2;
+} ]]></code>
+</codetemplate>
+<codetemplate abbreviation="error" xml:space="preserve">
+	<code><![CDATA[
+ini_set('display_errors',1);
+error_reporting(E_ALL);]]></code>
+</codetemplate>
+<codetemplate abbreviation="extcombo" xml:space="preserve">
+	<code><![CDATA[
+new Ext.form.ComboBox({
+store: new Ext.data.Store({
+proxy: new Ext.data.HttpProxy({url: '${cursor}.php'}),
+reader:	new Ext.data.JsonReader({id: 1},
+[
+{name: 'id'},
+{name: '${cursor}'},
+])
+}),
+displayField:'${cursor}',
+valueField:'${cursor}id',
+hiddenName: '${cursor}',
+typeAhead: true,
+triggerAction: 'all',
+emptyText:'Select...',
+selectOnFocus:true
+});]]></code>
+</codetemplate>
+<codetemplate abbreviation="extconn" xml:space="preserve">
+	<code><![CDATA[
+var c = new Ext.data.Connection;
+	c.request({
+			method: 'GET', 
+			url: '${cursor}.php?'+param,
+			callback: doResponse,
+			waitMsg: 'Please wait ....'
+			});
+		};
+
+	doResponse = function (object, success, response){
+		if(success) {
+				Ext.Msg.alert('Success','${cursor}');
+				}else{				
+				Ext.Msg.alert('Error','Failed! Please try again.');
+			}
+	}]]></code>
+</codetemplate>
+<codetemplate abbreviation="extform" xml:space="preserve">
+	<code><![CDATA[
+new Ext.FormPanel({
+	labelWidth: 75,
+	frame: true,
+	url: '${cursor}',
+	title: '${cursor}',
+	items: [
+	],
+	buttons: [{
+				text: '${cursor}',
+						handler:function(){
+							}
+		}]
+	});]]></code>
+</codetemplate>
+<codetemplate abbreviation="extformsubmit" xml:space="preserve">
+	<code><![CDATA[
+${cursor}.form.submit({
+			waitMsg: 'Please wait whilesaving.......',
+			success: function(){
+				Ext.Msg.alert('Information','Successfully saved.');
+			},
+			failure: function(){
+			Ext.Msg.alert('Error','Error while saving.');
+			}
+		});]]></code>
+</codetemplate>
+<codetemplate abbreviation="extready" xml:space="preserve">
+	<code><![CDATA[
+Ext.onReady(function(){
+
+});]]></code>
+</codetemplate>
+<codetemplate abbreviation="f" xml:space="preserve">
+	<code><![CDATA[
+function ${cursor}(${cursor}) {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="f_" xml:space="preserve">
+	<code><![CDATA[
+function _${cursor}(${cursor}) {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="fetch" xml:space="preserve">
+	<code><![CDATA[
+if($result){
+	while($row = @mysql_fetch_object($result))	{
+	${cursor}
+	}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="footr" xml:space="preserve">
+	<code><![CDATA[
+<footer>${cursor}</footer>]]></code>
+</codetemplate>
+<codetemplate abbreviation="for" xml:space="preserve">
+	<code><![CDATA[
+for($i=0;$i<${cursor};$i++){
+${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="foreach" xml:space="preserve">
+	<code><![CDATA[
+foreach (${cursor} as ${cursor}) {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="form" xml:space="preserve">
+	<code><![CDATA[
+<form action="${cursor}.php" method="post">
+	<input type="${cursor}" name="${cursor}" />
+	<input type="submit" />
+</form>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="formm" xml:space="preserve">
+	<code><![CDATA[
+<?= form_open_multipart('${cursor}'); ?>
+    ${cursor}
+<?= form_close(); ?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="get" xml:space="preserve">
+	<code><![CDATA[
+$${cursor}=$_GET['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="green" xml:space="preserve">
+	<code><![CDATA[
+#00FF00]]></code>
+</codetemplate>
+<codetemplate abbreviation="grey" xml:space="preserve">
+	<code><![CDATA[
+#C0C0C0]]></code>
+</codetemplate>
+<codetemplate abbreviation="h1" xml:space="preserve">
+	<code><![CDATA[
+<h1>${cursor}</h1>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="h2" xml:space="preserve">
+	<code><![CDATA[
+<h2>${cursor}</h2>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="h3" xml:space="preserve">
+	<code><![CDATA[
+<h3>${cursor}</h3>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="h4" xml:space="preserve">
+	<code><![CDATA[
+<h4>${cursor}</h4>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="h5" xml:space="preserve">
+	<code><![CDATA[
+<h5>${cursor}</h5>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="h6" xml:space="preserve">
+	<code><![CDATA[
+<h6>${cursor}</h6>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="head" xml:space="preserve">
+	<code><![CDATA[
+<head>
+	${cursor}
+</head>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="header" xml:space="preserve">
+	<code><![CDATA[
+<header>${cursor}</header>]]></code>
+</codetemplate>
+<codetemplate abbreviation="headr" xml:space="preserve">
+	<code><![CDATA[
+<header>${cursor}</header>]]></code>
+</codetemplate>
+<codetemplate abbreviation="hr" xml:space="preserve">
+	<code><![CDATA[
+<hr />${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="html" xml:space="preserve">
+	<code><![CDATA[
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>${cursor}</title>
+		${cursor}
+	</head>
+	<body>
+		${cursor}
+	</body>
+</html>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="i" xml:space="preserve">
+	<code><![CDATA[
+<i>${cursor}</i>${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="if" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor}) {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ifelse" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor}) {
+    ${cursor}
+} else {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ifelseif" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor}) {
+    ${cursor}
+} elseif (${cursor}) {
+    ${cursor}
+} else {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ifelses" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor})
+{
+	${cursor}
+}
+else
+	${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ifs" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor})
+	${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ifselse" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor})
+	${cursor}
+else
+{
+	${cursor}
+}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ifselses" xml:space="preserve">
+	<code><![CDATA[
+if (${cursor})
+	${cursor}
+else
+	${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="img" xml:space="preserve">
+	<code><![CDATA[
+<img src="${cursor}" alt="${cursor}" />
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="init" xml:space="preserve">
+	<code><![CDATA[
+require('init.php');
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="input" xml:space="preserve">
+	<code><![CDATA[
+<input type="${cursor}" name="${cursor}" />]]></code>
+</codetemplate>
+<codetemplate abbreviation="insert" xml:space="preserve">
+	<code><![CDATA[
+INSERT INTO ${cursor} (${cursor}) VALUES('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="jass" xml:space="preserve">
+	<code><![CDATA[
+$this->assignRef('${cursor}',$${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="jbase" xml:space="preserve">
+	<code><![CDATA[
+<?php echo JURI::base();?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="jeditor" xml:space="preserve">
+	<code><![CDATA[
+$editor =& JFactory::getEditor();
+			echo $editor->display('text', '', '100%', '400', '70', '15');?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="jexec" xml:space="preserve">
+	<code><![CDATA[
+defined('_JEXEC') or die('Restricted access');]]></code>
+</codetemplate>
+<codetemplate abbreviation="jfetch" xml:space="preserve">
+	<code><![CDATA[
+$result = $db->loadObjectList();]]></code>
+</codetemplate>
+<codetemplate abbreviation="jimp" xml:space="preserve">
+	<code><![CDATA[
+jimport('joomla.application.component.${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="jparam" xml:space="preserve">
+	<code><![CDATA[
+$params->get('${cursor}',${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="jq" xml:space="preserve">
+	<code><![CDATA[
+$db = & JFactory::getDBO();
+$query = "SELECT * FROM #__${cursor}";
+$db->setQuery($query);]]></code>
+</codetemplate>
+<codetemplate abbreviation="jqajax" xml:space="preserve">
+	<code><![CDATA[
+$.ajax({
+   type: "POST",
+   url: "${cursor}.php",
+   data: "${cursor}",
+   success: function(msg){
+${cursor}
+} 
+});]]></code>
+</codetemplate>
+<codetemplate abbreviation="jconf" xml:space="preserve">
+	<code><![CDATA[
+jQuery.noConflict();]]></code>
+</codetemplate>
+<codetemplate abbreviation="jqready" xml:space="preserve">
+	<code><![CDATA[
+$(document).ready(function() {
+${cursor}
+});]]></code>
+</codetemplate>
+<codetemplate abbreviation="jtmpl" xml:space="preserve">
+	<code><![CDATA[<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/]]></code>
+</codetemplate>
+<codetemplate abbreviation="label" xml:space="preserve">
+	<code><![CDATA[
+<label for="${cursor}">${cursor}</label>]]></code>
+</codetemplate>
+<codetemplate abbreviation="li" xml:space="preserve">
+	<code><![CDATA[
+<li>${cursor}</li>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="link" xml:space="preserve">
+	<code><![CDATA[
+<a href="${cursor}">${cursor}</a>${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="literal" xml:space="preserve">
+	<code><![CDATA[
+{literal}
+
+{/literal}]]></code>
+</codetemplate>
+<codetemplate abbreviation="loadconfig" xml:space="preserve">
+	<code><![CDATA[
+$this->load->config('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="loadhelper" xml:space="preserve">
+	<code><![CDATA[
+$this->load->helper('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="loadlang" xml:space="preserve">
+	<code><![CDATA[
+$this->load->lang('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="loadlib" xml:space="preserve">
+	<code><![CDATA[
+$this->load->library('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="loadplugin" xml:space="preserve">
+	<code><![CDATA[
+$this->load->plugin('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="loadview" xml:space="preserve">
+	<code><![CDATA[
+$this->load->view('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="log" xml:space="preserve">
+	<code><![CDATA[
+console.log(${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="loop" xml:space="preserve">
+	<code><![CDATA[
+for($i=0;$i<$num;$i++)
+{
+$${cursor}=mysql_result($result,$i,'${cursor}');
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="magget" xml:space="preserve">
+	<code><![CDATA[
+$${cursor}=$this->getRequest()->getParam(${cursor})]]></code>
+</codetemplate>
+<codetemplate abbreviation="magmodel" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = Mage::getModel('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="magq" xml:space="preserve">
+	<code><![CDATA[
+$sql = "SELECT * FROM ${cursor}";
+		$resource = Mage::getSingleton('core/resource');
+		$read= $resource->getConnection('core_read');
+		$arr = $read->fetchAll(${cursor}sql);]]></code>
+</codetemplate>
+<codetemplate abbreviation="mail" xml:space="preserve">
+	<code><![CDATA[
+$headers  = 'MIME-Version: 1.0' . "\rn";
+$headers .= 'Content-type: text/html; charset=utf-8' . "\rn";
+mail($mail,$subject,$body,$headers);]]></code>
+</codetemplate>
+<codetemplate abbreviation="mangenta" xml:space="preserve">
+	<code><![CDATA[
+#FF00FF]]></code>
+</codetemplate>
+<codetemplate abbreviation="md5" xml:space="preserve">
+	<code><![CDATA[
+$this->security->dohash('${cursor}', 'md5');]]></code>
+</codetemplate>
+<codetemplate abbreviation="mooajax" xml:space="preserve">
+	<code><![CDATA[
+var url='${cursor}.php';
+new Request(url, {method: 'get', onComplete: function(response){
+
+}}).send();]]></code>
+</codetemplate>
+<codetemplate abbreviation="mooready" xml:space="preserve">
+	<code><![CDATA[
+window.addEvent('domready', function() {
+
+});]]></code>
+</codetemplate>
+<codetemplate abbreviation="n" xml:space="preserve">
+	<code><![CDATA[
+$num = mysql_num_rows($result);
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="nav" xml:space="preserve">
+	<code><![CDATA[
+<nav>${cursor}</nav>]]></code>
+</codetemplate>
+<codetemplate abbreviation="nbsp" xml:space="preserve">
+	<code><![CDATA[
+&nbsp;]]></code>
+</codetemplate>
+<codetemplate abbreviation="num" xml:space="preserve">
+	<code><![CDATA[
+$num = $result->numRows();]]></code>
+</codetemplate>
+<codetemplate abbreviation="oclg" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $this->language->get('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="ocll" xml:space="preserve">
+	<code><![CDATA[
+$this->load->language('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="ocq" xml:space="preserve">
+	<code><![CDATA[
+$sql = "";
+$result = $this->db->query($sql);
+if($result->num_rows>0){
+${cursor}
+}]]></code>
+</codetemplate>
 
 </codetemplates>
