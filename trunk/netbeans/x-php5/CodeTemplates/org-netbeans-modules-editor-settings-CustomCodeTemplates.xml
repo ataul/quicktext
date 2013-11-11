@@ -1146,5 +1146,404 @@ if($result->num_rows>0){
 ${cursor}
 }]]></code>
 </codetemplate>
+<codetemplate abbreviation="ol" xml:space="preserve">
+	<code><![CDATA[
+<ol>
+	<li>${cursor}</li>
+	${cursor}
+</ol>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="option" xml:space="preserve">
+	<code><![CDATA[
+<option value="${cursor}">${cursor}</option>]]></code>
+</codetemplate>
+<codetemplate abbreviation="p" xml:space="preserve">
+	<code><![CDATA[
+<p>${cursor}</p>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="p?" xml:space="preserve">
+	<code><![CDATA[
+<?= ${cursor}; ?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="pe" xml:space="preserve">
+	<code><![CDATA[
+<?php echo ${cursor};?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="php" xml:space="preserve">
+	<code><![CDATA[
+<?php
+	${cursor}
+?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="pisgod" xml:space="preserve">
+	<code><![CDATA[
+$canIhaveAccess = 0;
+    $canIhaveAccess = $canIhaveAccess + checklevel('god');
+    if($canIhaveAccess == 1) {
+	${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="po" xml:space="preserve">
+	<code><![CDATA[
+$${cursor}=$_POST['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="post" xml:space="preserve">
+	<code><![CDATA[
+$this->input->post('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="pr" xml:space="preserve">
+	<code><![CDATA[
+echo '<pre>';
+print_r($${cursor});
+echo '</pre>';]]></code>
+</codetemplate>
+<codetemplate abbreviation="pre" xml:space="preserve">
+	<code><![CDATA[
+<pre>${cursor}</pre>
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="psmass" xml:space="preserve">
+	<code><![CDATA[
+$main_smarty->assign('${cursor}',$${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="purl" xml:space="preserve">
+	<code><![CDATA[
+my_base_url.my_pligg_base]]></code>
+</codetemplate>
+<codetemplate abbreviation="q" xml:space="preserve">
+	<code><![CDATA[
+$sql = "SELECT * FROM ${cursor}";
+$result = mysql_query($sql) or die($sql.'<br />'.mysql_error());
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="r" xml:space="preserve">
+	<code><![CDATA[
+redirect('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="rc" xml:space="preserve">
+	<code><![CDATA[
+resources/css/${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="red" xml:space="preserve">
+	<code><![CDATA[
+#FF0000]]></code>
+</codetemplate>
+<codetemplate abbreviation="req" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $_REQUEST['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="res" xml:space="preserve">
+	<code><![CDATA[
+$${cursor}=mysql_result($result,$i,'${cursor}');
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="ri" xml:space="preserve">
+	<code><![CDATA[
+resources/includes/${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="rimg" xml:space="preserve">
+	<code><![CDATA[
+resources/images/${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="rj" xml:space="preserve">
+	<code><![CDATA[
+resources/js/${cursor}]]></code>
+</codetemplate><codetemplate abbreviation="rq" xml:space="preserve">
+	<code><![CDATA[
+resources/query/${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="rs" xml:space="preserve">
+	<code><![CDATA[
+resources/sitefiles/${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="script" xml:space="preserve">
+	<code><![CDATA[
+<script type="text/javascript">
+${cursor}
+</script>]]></code>
+</codetemplate>
+<codetemplate abbreviation="scriptsrc" xml:space="preserve">
+	<code><![CDATA[
+<script type="text/javascript" src="${cursor}" ></script>]]></code>
+</codetemplate>
+<codetemplate abbreviation="sdata" xml:space="preserve">
+	<code><![CDATA[
+$this->input->session('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="sec" xml:space="preserve">
+	<code><![CDATA[
+<section>${cursor}</section>]]></code>
+</codetemplate>
+<codetemplate abbreviation="section" xml:space="preserve">
+	<code><![CDATA[
+<section>${cursor}</section>]]></code>
+</codetemplate>
+<codetemplate abbreviation="select" xml:space="preserve">
+	<code><![CDATA[
+<select name="${cursor}">
+	<option>${cursor}</option>
+${cursor}
+</select>]]></code>
+</codetemplate>
+<codetemplate abbreviation="sess" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $_SESSION['${cursor}'];]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfdfall" xml:space="preserve">
+	<code><![CDATA[
+$sql="SELECT * FROM ${cursor}";
+$con = Doctrine_Manager::getInstance()->connection();
+$ = $con->fetchAll($sql);]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfdfetch" xml:space="preserve">
+	<code><![CDATA[
+$q = Doctrine_Query::create()
+	->select('*')
+	->from('${cursor}')
+	->where('${cursor} = ?',${cursor});
+$${cursor}=$q->fetchArray();]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfdq" xml:space="preserve">
+	<code><![CDATA[
+$sql="${cursor}";
+$con = Doctrine_Manager::getInstance()->connection();
+$st = $con->execute($sql);]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfecho" xml:space="preserve">
+	<code><![CDATA[
+<?php echo __('${cursor}');?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfeco" xml:space="preserve">
+	<code><![CDATA[
+echo __('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfexec" xml:space="preserve">
+	<code><![CDATA[
+public function execute${cursor}(sfWebRequest $request){
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="sffetch" xml:space="preserve">
+	<code><![CDATA[
+while($resultSet->next()){
+ $${cursor}=$resultSet->getString('${cursor}');
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfget" xml:space="preserve">
+	<code><![CDATA[
+$ = $sf_request->getParameter('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfimg" xml:space="preserve">
+	<code><![CDATA[
+<?php echo image_tag('${cursor}');?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfjs" xml:space="preserve">
+	<code><![CDATA[
+<?php echo javascript_include_tag('${cursor}');?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="sflink" xml:space="preserve">
+	<code><![CDATA[
+<?php echo link_to('${cursor}');?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfparam" xml:space="preserve">
+	<code><![CDATA[
+$${cursor}=$this->getRequestParameter('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfpo" xml:space="preserve">
+	<code><![CDATA[
+$${cursor} = $request->getParameter('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfq" xml:space="preserve">
+	<code><![CDATA[
+$connection = Propel::getConnection();
+$sql = "SELECT * FROM ${cursor}";
+$stmt = $connection->prepareStatement($sql);
+$resultSet = $stmt->executeQuery();]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfred" xml:space="preserve">
+	<code><![CDATA[
+$this->redirect('${cursor}$);]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfselect" xml:space="preserve">
+	<code><![CDATA[
+$c = new Criteria();
+$c->add(${cursor}Peer::ID,$id);
+$this->${cursor}=${cursor}Peer::doSelect($c);]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfset" xml:space="preserve">
+	<code><![CDATA[
+sfContext::getInstance()->getRequest()->setParameter('${cursor}', ${cursor}); ]]></code>
+</codetemplate>
+<codetemplate abbreviation="sfupload" xml:space="preserve">
+	<code><![CDATA[
+<?php
+ echo form_tag('media/upload','multipart=true');
+ echo input_file_tag('file'); echo submit_tag('Send');?></form>
 
+
+ $fileName = $this->getRequest()->getFileName('file');
+ $this->getRequest()->moveFile('file',sfConfig::get('sf_upload_dir'.'/'.$fileName));]]></code>
+</codetemplate>
+<codetemplate abbreviation="sha1" xml:space="preserve">
+	<code><![CDATA[
+$this->security->dohash('${cursor}');]]></code>
+</codetemplate>
+<codetemplate abbreviation="smass" xml:space="preserve">
+	<code><![CDATA[
+$smarty->assign('${cursor}',$${cursor});]]></code>
+</codetemplate>
+<codetemplate abbreviation="span" xml:space="preserve">
+	<code><![CDATA[
+<span>${cursor}</span>]]></code>
+</codetemplate>
+<codetemplate abbreviation="ssetdata" xml:space="preserve">
+	<code><![CDATA[
+$this->session->set_userdata(array(${cursor}));]]></code>
+</codetemplate>
+<codetemplate abbreviation="style" xml:space="preserve">
+	<code><![CDATA[
+<style type="text/css">
+${cursor}
+</style>]]></code>
+</codetemplate>
+<codetemplate abbreviation="switch" xml:space="preserve">
+	<code><![CDATA[
+switch($${cursor}) {
+	case '${cursor}':
+	${cursor}
+break;${cursor}
+default:
+${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="table" xml:space="preserve">
+	<code><![CDATA[
+<table>
+	<tr>
+		<td>${cursor}</td>
+		${cursor}
+	</tr>
+	${cursor}
+</table>]]></code>
+</codetemplate>
+<codetemplate abbreviation="td" xml:space="preserve">
+	<code><![CDATA[
+<td>${cursor}</td>]]></code>
+</codetemplate>
+<codetemplate abbreviation="textarea" xml:space="preserve">
+	<code><![CDATA[
+<textarea name="${cursor}">${cursor}</textarea>]]></code>
+</codetemplate>
+<codetemplate abbreviation="th" xml:space="preserve">
+	<code><![CDATA[
+<th>${cursor}</th>]]></code>
+</codetemplate>
+<codetemplate abbreviation="thead" xml:space="preserve">
+	<code><![CDATA[
+<thead>
+	<tr>
+		<th>${cursor}</th>
+	</tr>
+</thead>]]></code>
+</codetemplate>
+<codetemplate abbreviation="timeout" xml:space="preserve">
+	<code><![CDATA[
+setTimeout('${cursor}()',100);]]></code>
+</codetemplate>
+<codetemplate abbreviation="title" xml:space="preserve">
+	<code><![CDATA[
+<title>${cursor}</title>]]></code>
+</codetemplate>
+<codetemplate abbreviation="tr" xml:space="preserve">
+	<code><![CDATA[
+<tr>
+	${cursor}
+</tr>]]></code>
+</codetemplate>
+<codetemplate abbreviation="ul" xml:space="preserve">
+	<code><![CDATA[
+<ul>
+	<li>${cursor}</li>
+	${cursor}
+</ul>]]></code>
+</codetemplate>
+<codetemplate abbreviation="update" xml:space="preserve">
+	<code><![CDATA[
+UPDATE ${cursor} SET ${cursor}=${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="upload" xml:space="preserve">
+	<code><![CDATA[
+<form action="" method="post" enctype="multipart/form-data">
+	<input type="file" name="image" />
+	<input type="submit" name="" value="upload"/>	
+</form>
+<?
+	$uploadfile = 'up/';
+	$tmp = $_FILES['image']['tmp_name'];
+	$file_name = $_FILES['image']['name'];
+	move_uploaded_file($tmp, $uploadfile.$file_name);
+?>]]></code>
+</codetemplate>
+<codetemplate abbreviation="v" xml:space="preserve">
+	<code><![CDATA[
+'$${cursor}']]></code>
+</codetemplate>
+<codetemplate abbreviation="val" xml:space="preserve">
+	<code><![CDATA[
+if ($this->validation->run()) {
+    ${cursor}
+} else {
+    ${cursor}
+}]]></code>
+</codetemplate>
+<codetemplate abbreviation="valfield" xml:space="preserve">
+	<code><![CDATA[
+$fields['${cursor}'] = '${cursor}';]]></code>
+</codetemplate>
+<codetemplate abbreviation="valrule" xml:space="preserve">
+	<code><![CDATA[
+$rules['${cursor}'] = '${cursor}';]]></code>
+</codetemplate>
+<codetemplate abbreviation="valsetfields" xml:space="preserve">
+	<code><![CDATA[
+$this->validation->set_fields($fields);]]></code>
+</codetemplate>
+<codetemplate abbreviation="valsetrule" xml:space="preserve">
+	<code><![CDATA[
+$this->validation->set_rules($rules);]]></code>
+</codetemplate>
+<codetemplate abbreviation="vdo" xml:space="preserve">
+	<code><![CDATA[
+<video src="${cursor}"></video>]]></code>
+</codetemplate>
+<codetemplate abbreviation="video" xml:space="preserve">
+	<code><![CDATA[
+<video src="${cursor}"></video>]]></code>
+</codetemplate>
+<codetemplate abbreviation="while" xml:space="preserve">
+	<code><![CDATA[
+while (${cursor}) {
+    ${cursor}
+} ]]></code>
+</codetemplate>
+<codetemplate abbreviation="whiles" xml:space="preserve">
+	<code><![CDATA[
+while (${cursor})
+	${cursor}
+${cursor}]]></code>
+</codetemplate>
+<codetemplate abbreviation="white" xml:space="preserve">
+	<code><![CDATA[
+#FFFFFF]]></code>
+</codetemplate>
+<codetemplate abbreviation="wpq" xml:space="preserve">
+	<code><![CDATA[
+$sql = "SELECT * FROM ".$wpdb->prefix."${cursor}";
+$result = $wpdb->query($sql);]]></code>
+</codetemplate>
+<codetemplate abbreviation="yellow" xml:space="preserve">
+	<code><![CDATA[
+#FFFF00]]></code>
+</codetemplate>
 </codetemplates>
