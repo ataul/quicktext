@@ -1,7 +1,7 @@
 /**
  * @author Ataul
  * @first_created September 3, 2008
- * @last_updated September 4, 2010
+ * @last_updated November 11, 2013
  */
 
 package AConv;
@@ -20,7 +20,7 @@ public class Conv {
 	
 	public Conv(){
 		b = new String();
-		version = "0.2";
+		version = "0.3";
 		this.file = new AFile();
 	}
 	
@@ -55,11 +55,18 @@ public class Conv {
 			b+=Abbreviation[i];
 			b+="\" xml:space=\"preserve\">";
 			file.writeFile(b);
-			b="	<code>";
+			b="	<code><![CDATA[";
+            file.writeFile(b);
 			String code = Code[i];
-			code.replace("$","${cursor}");
-			b+=code;
-			b+="</code>";
+            code = code.replace("\\$","@dollar@");
+			code = code.replace("$","${cursor}");
+			code = code.replace("@dollar@","$");                        
+			String[] parts = code.split("newline");
+			int j;
+			for ( j = 0; j < parts.length-1; j++) {                            
+				file.writeFile(parts[j]);
+			}
+			b = parts[j]+"]]></code>";
 			file.writeFile(b);
 			b="</codetemplate>";
 			file.writeFile(b);
