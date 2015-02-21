@@ -1,0 +1,27 @@
+{
+  "css": {
+    "snippets": {
+      "c": "/**\n*----------------------------------------- \n* ${1:Section} \n*-----------------------------------------\n*/\n"
+    }
+  },
+  "html": {
+        "filters":"html",
+    "snippets": {
+            "php": "<?php ${cursor} ?>",
+            "php:foreach": "<?php foreach(\\$array as \\$k=>\\$v){\n\t${child}${cursor}\n} ?>",
+            "php:if": "<?php if (${cursor}): ?>",
+            "php:elseif": "<?php elseif (${cursor}): ?>",
+            "php:else": "<?php else: ?>${cursor}",
+            "php:endif": "<?php endif; ?>${cursor}"
+    },
+        "abbreviations": {
+            "phpt": "some text"
+        }        
+  },
+  "clike": {
+    "snippets": {
+      "c": "/**\n*----------------------------------------- \n* ${1:Section} \n*-----------------------------------------\n*/\n",
+            "foreach": "foreach(\\$array as \\$k=>\\$v){\n\t${child}${cursor}\n}\n"
+    }
+  }
+}
