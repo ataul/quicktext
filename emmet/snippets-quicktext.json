@@ -21,7 +21,14 @@
   "clike": {
     "snippets": {
       "c": "/**\n*----------------------------------------- \n* ${1:Section} \n*-----------------------------------------\n*/\n",
-            "foreach": "foreach(\\$array as \\$k=>\\$v){\n\t${child}${cursor}\n}\n"
+        "foreach": "foreach(\\$array as \\$k=>\\$v){\n\t${child}${cursor}\n}\n",
+        "case": "case '${cursor}':\n${cursor}\nbreak;",
+        "echo": "echo '<br />The value is '.\\$${cursor};",
+        "efblock": "<div class=\"block\">\n<div class=",
+        "efinsert": "\\$${cursor} = array(\n\t''=>\\$_POST[''],\n\t);\neF_insertTableData(\"\", \\$);",
+        "efq": "\\$${cursor} = eF_getTableData(\"\", \"*\" );",
+        "pr": "echo '<pre>';\nprint_r(\\$${cursor});\necho '</pre>';",
+        "smass": "\\$smarty->assign('${cursor}', \\$);" 
     }
   }
 }
