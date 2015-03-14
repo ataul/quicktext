@@ -28,7 +28,9 @@
         "efinsert": "\\$${cursor} = array(\n\t''=>\\$_POST[''],\n\t);\neF_insertTableData(\"\", \\$);",
         "efq": "\\$${cursor} = eF_getTableData(\"\", \"*\" );",
         "pr": "echo '<pre>';\nprint_r(\\$${cursor});\necho '</pre>';",
-        "smass": "\\$smarty->assign('${cursor}', \\$);" 
+        "req": "\\$${cursor} = \\$_REQUEST[''];",
+        "smass": "\\$smarty->assign('${cursor}', \\$);",
+        "switch": "switch(\\$${cursor}){\n\tcase '':\n\n\tbreak;\n}"
     }
   }
 }
