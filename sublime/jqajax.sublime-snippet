@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+	jQuery.ajax({
+			type: "POST",
+			url: "${1:url}.php",
+			data: {},
+			success: function(response){
+				${2:console.log(response);}
+			} 
+		});
+]]></content>
+	<tabTrigger>jqajax</tabTrigger>
+</snippet>

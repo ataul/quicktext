@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+eF_deleteTableData("${1:table}", "id=$id");
+]]></content>
+	<tabTrigger>efdel</tabTrigger>	
+</snippet>

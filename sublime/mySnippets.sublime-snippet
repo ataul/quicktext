@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+\$${1:result} = eF_getTableData("${2:table}","*","");
+]]></content>	
+	<tabTrigger>efq</tabTrigger>	
+</snippet>
