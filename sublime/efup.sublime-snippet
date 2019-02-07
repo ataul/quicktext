@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+eF_updateTableData("${1:table}",\$${1:table}, "id=$id");
+]]></content>
+	<tabTrigger>efup</tabTrigger>	
+</snippet>

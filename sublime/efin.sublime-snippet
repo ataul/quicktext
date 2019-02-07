@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$data = array(
+	'${1:column}' => ${2:value}
+);
+eF_insertTableData("${3:table}", $data);
+]]></content>
+	<tabTrigger>efin</tabTrigger>	
+</snippet>
