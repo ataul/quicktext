@@ -3,7 +3,7 @@
 
 <div class="block">
 	<div class="blockContents">
-	  <div class="title">$</div>
+	  <div class="title"></div>
 	  <span class="subtitle"></span>
 	  <span style="display:none">&nbsp;</span>
 		<div class="content" >
@@ -11,17 +11,17 @@
 			<form action="" method="post">
 				<table>
 					<tr>
-						<td class="labelCell">$</td>
+						<td class="labelCell"></td>
 						<td></td>
 					</tr>
 
 				</table>
 				<br />				
-				<input type="hidden" name="op" value="$" />
+				<input type="hidden" name="op" value="${1:op}" />
 				<input type="submit" value="Show" class="flatButton"/>
 			</form>
 			<br />
-			{if $smarty.request.op == ''}
+			{if \$smarty.request.op == '${1:op}'}
 				<table width="100%" class="filter_table">
 					<thead>
 						<tr class="topTitle">
@@ -29,7 +29,7 @@
 						</tr>
 					</thead>
 					<tbody>	
-					{foreach from=$report_data item='item'}
+					{foreach from=\$report_data item='item'}
 						<tr>
 							<td></td>
 							
