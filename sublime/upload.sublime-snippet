@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+<form action="" method="post" enctype="multipart/form-data">
+	<input type="file" name="image" />
+	<input type="submit" name="" value="upload"/>
+</form>
+<?php
+\$uploadfile = 'up/';
+\$tmp = \$_FILES['image']['tmp_name'];
+\$file_name = \$_FILES['image']['name'];
+move_uploaded_file(\$tmp, \$uploadfile.\$file_name);
+?>
+]]></content>
+	<tabTrigger>upload</tabTrigger>
+</snippet>
