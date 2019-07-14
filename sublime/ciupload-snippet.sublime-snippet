@@ -4,6 +4,8 @@
 \$config['allowed_types'] = 'png|jpg|jpeg|gif|JPG|PNG';
 \$this->load->library('upload', '\$config');
 if (\$this->upload->do_upload()) {
+	\$upload_data = \$this->upload->data();			
+	\$file_name = \$upload_data['file_name'];
 	${2}
 } else {
 
