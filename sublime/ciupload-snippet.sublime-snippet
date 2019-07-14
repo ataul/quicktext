@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+\$config['upload_path'] = '${1:upload}';
+\$config['allowed_types'] = 'png|jpg|jpeg|gif|JPG|PNG';
+\$this->load->library('upload', '\$config');
+if (\$this->upload->do_upload()) {
+	${2}
+} else {
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ciupload</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
