@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+\$url = 'http://${1:url}';
+\$data = '${2:name}=${2:name}';
+\$request = curl_init(\$url);
+curl_setopt(\$request, CURLOPT_HEADER, 0);
+curl_setopt(\$request, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt(\$request, CURLOPT_POSTFIELDS, \$data);
+curl_setopt(\$request, CURLOPT_SSL_VERIFYPEER, FALSE);
+\$response = curl_exec(\$request);
+curl_close(\$request);
+]]></content>
+	<tabTrigger>curl</tabTrigger>
+</snippet>
