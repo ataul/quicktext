@@ -2,13 +2,11 @@
 	<content><![CDATA[
 \$config['upload_path'] = '${1:upload}';
 \$config['allowed_types'] = 'png|jpg|jpeg|gif|JPG|PNG';
-\$this->load->library('upload', \$config);
+\$this->load->library('upload', '\$config');
 if (\$this->upload->do_upload()) {
-	\$upload_data = \$this->upload->data();			
-	\$file_name = \$upload_data['file_name'];
 	${2}
 } else {
-	//\$this->upload->display_errors();
+
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

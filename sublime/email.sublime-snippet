@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\$headers  = 'MIME-Version: 1.0' . "\r\n";
+\$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+mail(\$mail,\$subject,\$body,\$headers);
+]]></content>
+	<tabTrigger>email</tabTrigger>
+</snippet>
