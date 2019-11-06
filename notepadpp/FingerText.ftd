@@ -1,0 +1,23 @@
+smass
+GLOBAL
+$smarty->assign('',$);[>END<]!$[FingerTextData FingerTextData]@#
+prx
+GLOBAL
+echo '<pre>';
+print_r($);
+echo '</pre>';
+[>END<]!$[FingerTextData FingerTextData]@#
+jqajax
+GLOBAL
+jQuery.ajax({
+		type: "POST",
+		url: ".php",
+		data: {},
+		success: function(response){
+			console.log(response);
+		} 
+	});[>END<]!$[FingerTextData FingerTextData]@#
+efq
+GLOBAL
+$ = eF_getTableData("","","");
+[>END<]!$[FingerTextData FingerTextData]@#
