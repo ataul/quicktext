@@ -21,3 +21,8 @@ efq
 GLOBAL
 $ = eF_getTableData("","","");
 [>END<]!$[FingerTextData FingerTextData]@#
+jqready
+GLOBAL
+$( document ).ready(function() {
+	
+});[>END<]!$[FingerTextData FingerTextData]@#
