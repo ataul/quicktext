@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+	<file path="${2:}">	
+		<operation error="skip"> 
+			<search><![CDATA[]]${1:>}
+			</search>
+		  	<add position="replace"><![CDATA[                
+		  ]]${1:>}
+		  </add>
+		</operation>					
+	</file>
+]]></content>
+	<tabTrigger>ocmod</tabTrigger>	
+</snippet>
