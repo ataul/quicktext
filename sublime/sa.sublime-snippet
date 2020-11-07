@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-				$userac = $this->registry->get('user');
-				if($userac->user_group_name=='Store admin'){								
-					${1}." WHERE ${2}.store_id = $userac->store_id";	
+				\$userac = \$this->registry->get('user');
+				if(\$userac->user_group_name=='Store admin'){								
+					${1}." WHERE ${2}.store_id = \$userac->store_id";	
 				}else{
 					${1}
 				}
